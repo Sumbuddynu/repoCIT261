@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figcaption,
+figure {
+    display: block;
+    /* just in case we have
+    any older browsers that don't recognize
+    the HTML5 semantic elements */
+}
+
+h1,
+h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 150px;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /*background-image: url("summerbouquet.png");*/
+    background-size: cover;
+    flex-flow: column nowrap; 
+}
+
+.top-nav {
+    display: flex;
+    text-align: right;
+    justify-content: space-around;
+    background-color: black;
+    font-size: 50px;
+    color: antiquewhite;
+    margin: 0;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    background-image: url("summerbouquet.png");
+    background-size: auto;
+}
+
+nav a:link {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+nav a:visited {
+    color: #47556F;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: rgb(56, 58, 14);
+}
+
+.top-nav a:link {
+    text-decoration: none;
+    color:antiquewhite;
+}
+
+.top-nav a:hover {
+    color: #E7EF61;
+}
+
+.top-nav a:visited {
+    color: antiquewhite;
+}
+
+nav a:active {}
+
+footer a:link{
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    color: rgb(56, 58, 14);
+}
+
+footer a:visited {
+    color: #47556F;
+}
+
+footer {
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px;
+    padding-bottom: 0;
+    margin-bottom: 60px;
+    background-color: antiquewhite;
+    color: black;
+}
+
+:root {
+  --mainColor: #ff9800;
+}
+
+.top-nav a, a {
+  background:
+     linear-gradient(
+       to bottom, var(--mainColor) 0%,
+       var(--mainColor) 100%
+     );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+  color: #000;
+  text-decoration: none;
+  transition: background-size .2s;
+}
+
+a:hover {
+  background-size: 4px 50px;
+}
+
+.show-cart {
+    width: 18rem;
+    padding: 2rem 1.5rem;
+    transform: rotateY(-360deg);
+}
+
+.search-bar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.search-input {
+    width: 18rem;
+    padding: 2rem 1.5rem;
+    transform: rotateY(-360deg);
+}
+
+.search-input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+}
+
+.search-bar:hover > .search-input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:#ff9800;
+    transition: width 0.4s linear;
+}
+
+.search-icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+}
+
+#createButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#createButton {
+    padding: 10px;
+    font-size: 30px;
+}
+
+a[href^="https"]:hover{
+    background-color: #ff9800;
+}
+
+.ice-cream-items-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 20px;
+    padding: 15px;
+    background-color: antiquewhite;
+}
+
+.iceCreamBox {
+    width: 350px;
+    height: 350px;
+    border-radius: 17%;
+}
+
+.ice-cream-item:hover {
+    background-color: #ff9800;
+    border-radius: 10%;
+}
+
+.IceCreamNameText {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+.IceCreamPrice {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+
+#IceCreamCartTitleText {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 60px;
+}
+
+#cart-section {
+    margin: 20px;
+    padding: 15px;
+}
+
+.cart-row-title {
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration-line: underline;
+    font-size: 30px;
+}
+
+.cart-item-quantity-text {
+    margin-right: -120px;
+}
+
+.cart-item-price {
+    margin-right: -80px;
+}
+
+.cart-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart-item {
+    display: flex;
+}
+
+.cart-item-name {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 30px;
+}
+
+.cart-item-price {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+
+input[type=number] {
+    width: 50px;
+    font-size: 40px;
+}
+
+.remove-item-button {
+    color:antiquewhite;
+    text-emphasis: bold;
+    font-size: 30px;
+    background-color: red;
+    margin-left: 30px;
+}
+
+#Back-Cart-Button {
+    display: flex;
+    padding-right: 750px;
+}
+
+.totalAmount {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    padding-left: 600px
+}
+
+.buyButton {
+    display: block;
+    margin: 40px auto 80px auto;
+    padding: 20px 40px 20px 40px;
+    background-color: #ff9800;
+    border-radius: 15%;
+    font-size: 60px;
+}
+
+.login-container {
+    font-size: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px;
+    padding: 15px;
+}
+
+input[type=text],
+input[type=password],
+input[type=submit] {
+    width: 500px;
+    font-size: 50px;
+}
+
+input[type=checkbox]
+{
+  -ms-transform: scale(4);
+  -moz-transform: scale(4);
+  -webkit-transform: scale(4);
+  -o-transform: scale(4);
+  transform: scale(4);
+  padding: 10px;
+}
+ 
+@media only screen and (min-width: 1080px) {
+    body {
+        margin: 0;  /*remove any margin from body */
+        padding: 0;  /*ditto for padding */
+        margin-bottom: -1000em;
+        padding-bottom: 0;
+    }
+}
